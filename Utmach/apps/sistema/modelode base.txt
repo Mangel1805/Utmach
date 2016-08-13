@@ -1,0 +1,78 @@
+# This is an auto-generated Django model module.
+# You'll have to do the following manually to clean this up:
+#   * Rearrange models' order
+#   * Make sure each model has one field with primary_key=True
+#   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
+# Feel free to rename the models, but don't rename db_table values or field names.
+#
+# Also note: You'll have to insert the output of 'django-admin.py sqlcustom [app_label]'
+# into your database.
+from __future__ import unicode_literals
+
+from django.db import models
+
+
+class Estudiante(models.Model):
+    id_estudiante = models.IntegerField(primary_key=True)
+    est_nombre = models.CharField(max_length=50)
+    est_apellido = models.CharField(max_length=80)
+    est_telefono = models.CharField(max_length=10, blank=True)
+    est_celular = models.CharField(max_length=10, blank=True)
+    est_direccion = models.CharField(max_length=200)
+    est_email = models.CharField(max_length=80)
+    est_estado = models.BooleanField()
+
+    class Meta:
+        managed = False
+        db_table = 'estudiante'
+
+
+class Materia(models.Model):
+    id_materia = models.IntegerField(primary_key=True)
+    mat_nombre = models.CharField(max_length=80)
+
+    class Meta:
+        managed = False
+        db_table = 'materia'
+
+
+class Matricula(models.Model):
+    id_matricula = models.IntegerField()
+    mat_descripcion = models.CharField(max_length=80)
+    mat_ano = models.DateField()
+    mat_semestre = models.BigIntegerField()
+    mat_estado = models.BooleanField()
+    id_estudiante = models.ForeignKey(Estudiante, db_column='id_estudiante')
+    id_paralelo = models.ForeignKey('Paralelo', db_column='id_paralelo')
+    id_materia = models.ForeignKey(Materia, db_column='id_materia')
+
+    class Meta:
+        managed = False
+        db_table = 'matricula'
+
+
+class Notas(models.Model):
+    id_notas = models.IntegerField(primary_key=True)
+    not_deberes = models.FloatField()
+    not_par_clases = models.FloatField()
+    not_oral = models.FloatField()
+    not_escritas = models.FloatField()
+    not_examen = models.FloatField()
+    not_total = models.FloatField()
+    id_matricula = models.ForeignKey(Matricula, db_column='id_matricula', blank=True, null=True)
+    id_estudiante = models.IntegerField(blank=True, null=True)
+    id_paralelo = models.IntegerField(blank=True, null=True)
+    id_materia = models.IntegerField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'notas'
+
+
+class Paralelo(models.Model):
+    id_paralelo = models.IntegerField(primary_key=True)
+    par_descipcion = models.CharField(max_length=40)
+
+    class Meta:
+        managed = False
+        db_table = 'paralelo'

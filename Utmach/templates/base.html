@@ -15,10 +15,10 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
     <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-    <title>PARQUE INTELIGENTE</title>
+    <title>SIUTMACH | INSTITUTO DE IDIOMAS</title>
 
     <!-- Favicons-->
-    <link rel="icon" href="{{STATIC_URL}}images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{STATIC_URL}}images/siutmach.png" />
     <!-- Favicons-->
     <link rel="apple-touch-icon-precomposed" href="{{STATIC_URL}}images/favicon/apple-touch-icon-152x152.png">
     <!-- For iPhone -->
@@ -57,21 +57,18 @@
         <div class="navbar-fixed">
             <nav class="cyan">
                 <div class="nav-wrapper">
-                    <h1 class="logo-wrapper"><a href="index.html" class="brand-logo darken-1"><img src="{{STATIC_URL}}images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text">PARQUE INTELIGENTE</span></h1>
-                    <ul class="right hide-on-med-and-down">
-                        <li class="search-out">
-                            <input type="text" class="search-out-text">
-                        </li>
-                        <li>    
-                            <a href="javascript:void(0);" class="waves-effect waves-block waves-light show-search"><i class="mdi-action-search"></i></a>                              
-                        </li>
-                        <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a>
-                        </li>
-                        <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light"><i class="mdi-social-notifications"></i></a>
-                        </li>
-                        <!-- Dropdown Trigger -->                        
-                        <li><a href="#" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse"><i class="mdi-communication-chat"></i></a>
-                        </li>
+                    
+                    <ul class="right">
+ 
+                    <li id="usuario" class="bold">
+                    
+                        <i><h6>
+                            {% for per in sesion %}
+                                {{per.usuario}}
+                            {% endfor %}</h6>
+                        </i>
+                    </li>
+                    <li class="bold"><a href="/notas/salir" class="waves-effect waves-cyan"><i><h6>Cerrar Sesion</h6>   </i>        </li></a>
                     </ul>
                 </div>
             </nav>
@@ -88,36 +85,22 @@
         <div class="wrapper">
 
             <!-- START LEFT SIDEBAR NAV-->
-            <aside id="left-sidebar-nav">
-                <ul id="slide-out" class="side-nav fixed leftside-navigation">
-                    <li class="user-details cyan darken-2">
-                        <div class="row">
-                            <div class="col col s4 m4 l4">
-                                <img src="{{STATIC_URL}}images/avatar.jpg" alt="" class="circle responsive-img valign profile-image">
-                            </div>
-                            <div class="col col s8 m8 l8">
-                                <ul id="profile-dropdown" class="dropdown-content">
-                                    <li><a href="#"><i class="mdi-action-face-unlock"></i> Profile</a>
-                                    </li>
-                                    <li><a href="#"><i class="mdi-action-settings"></i> Settings</a>
-                                    </li>
-                                    <li><a href="#"><i class="mdi-communication-live-help"></i> Help</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li><a href="#"><i class="mdi-action-lock-outline"></i> Lock</a>
-                                    </li>
-                                    <li><a href="#"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
-                                    </li>
-                                </ul>
-                                <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">USUARIO<i class="mdi-navigation-arrow-drop-down right"></i></a>
-                                <p class="user-roal">Administrator</p>
-                            </div>
-                        </div>
+ 
+
+
+
+
+
+
+
+
+
+                <aside id="left-sidebar-nav">
+                <ul id="slide-out" class="side-nav fixed ">
+                    
+                    <li class="bold"><a href="/notas/listar" class=""><i class="mdi-action-settings-applications"></i> Notas</a>
                     </li>
-                    <li class="bold"><a href="/dispositivo/listar" class="waves-effect waves-cyan"><i class="mdi-action-settings-applications"></i> Dispositivos</a>
-                    </li>
-                    <li class="bold"><a href="/sensor/listar" class="waves-effect waves-cyan"><i class="mdi-action-settings-remote"></i> Sensores </a>
-                    </li>
+   
                     
                     
                 </ul>
@@ -210,17 +193,7 @@
     <!-- Toast Notification -->
     <script type="text/javascript">
     // Toast Notification
-    $(window).load(function() {
-        setTimeout(function() {
-            Materialize.toast('<span>Hiya! I am a toast.</span>', 1500);
-        }, 3000);
-        setTimeout(function() {
-            Materialize.toast('<span>You can swipe me too!</span>', 3000);
-        }, 5500);
-        setTimeout(function() {
-            Materialize.toast('<span>You have new order.</span><a class="btn-flat yellow-text" href="#">Read<a>', 3000);
-        }, 18000);
-    });
+    
     
     </script>
     {%block js%}

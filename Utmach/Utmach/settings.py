@@ -68,6 +68,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'utmach',
+        #'NAME': 'instituto',
         'USER': 'postgres',
         'PASSWORD': 'root',
         'HOST': 'localhost',

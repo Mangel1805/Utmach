@@ -1,0 +1,207 @@
+.panelTransPer{
+	width			: 905px;
+	padding-left    : 7px;
+    padding-right   : 7px;
+  	padding-bottom  : 7px;
+  	padding-top     : 7px;
+	margin-left		: 5%;
+	border     		: 1px solid #6ab0ff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 6px;
+	-moz-box-sizing   : border-box;
+	-moz-box-shadow   : 0px 1px 20px #adfcdb;
+	
+	-o-border-radius  : 10px;
+    -opera-sizing    : border-box;
+	
+    -khtml-box-sizing: border-box;
+    overflow         : hidden;
+	
+	background 		:  url(transImgpanel.png) repeat-y;
+
+}
+.panelTrans{
+	width			: 860px;
+	padding-left    : 7px;
+    padding-right   : 7px;
+  	padding-bottom  : 7px;
+  	padding-top     : 7px;
+	margin-left		: 5%;
+	border     		: 1px solid #6ab0ff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 6px;
+	-moz-box-sizing   : border-box;
+	-moz-box-shadow   : 0px 1px 20px #adfcdb;
+	
+	-o-border-radius  : 10px;
+    -opera-sizing    : border-box;
+	
+    -khtml-box-sizing: border-box;
+    overflow         : hidden;
+	
+	background 		:  url(transImgpanel.png) repeat-y;
+
+}
+.panelTransAsigna{
+	width			: 550px;
+	padding-left    : 7px;
+    padding-right   : 7px;
+  	padding-bottom  : 7px;
+  	padding-top     : 7px;
+	margin-left		: 7.5%;
+	border     		: 1px solid #6ab0ff;
+	-webkit-border-radius: 5px;
+	
+	background 		:  url(transImgpanel.png) repeat-y;
+
+}
+.panelTransFlash{
+	width			: 405px;
+	padding-left    : 7px;
+    padding-right   : 7px;
+  	padding-bottom  : 7px;
+  	padding-top     : 7px;
+	
+	border     		: 1px solid #6ab0ff;
+	-webkit-border-radius: 5px;
+	
+	background 		:  url(transImgpanel.png) repeat-y;
+
+}
+.panel{
+    width				: auto;
+    height	   			: auto;
+    border				: 1px solid #7ca3c5;
+    border-left			: 2px solid #7ca3c5;
+    border-right		: 2px solid #7ca3c5;
+    background-color	: #8eb3d4;
+    padding-bottom		: 5px;  
+ 	-webkit-border-radius: 5px;
+    overflow			: hidden;  
+  }
+.panelInterior{
+    width				: auto;
+    height	   			: auto;
+    border				: 1px RELIEVE #BABABA;
+    background-color	: #8eb3d4;     
+   	border-top			:3px solid #7ea2c1;
+    border-bottom		:3px solid #7ea2c1;    
+    overflow			: hidden; 	
+  }
+.panelBuscar{
+    width				: auto;
+    height	   			: auto;
+    border				: 1px RELIEVE #BABABA;   
+    background-color	: #92b7d9;   
+ 	-webkit-border-radius: 1px;
+    border-top			:1px solid #a3c9ea;
+    border-bottom		:1px solid #a3c9ea;
+    overflow			: hidden;  
+  }
+
+
+.panelImagenes{
+    width				: 65px;
+    height	   			: auto; 
+  	padding-top			: 5px;  
+  	padding-left		: 5px;  
+  	padding-right		: 5px;  
+    border				: 1px RELIEVE #BABABA;
+   	background 			: url(imgfond1.png) repeat-y;
+  	border-bottom		: 1px solid #92a3c1;
+ 	cursor				: pointer;
+    overflow			: hidden;  
+  }
+.panelImagenes:hover{
+   	text-shadow			: 1px 1px 1px #253ea2;
+    border				: 1px RELIEVE #BABABA;
+   	background 			: url(imgfondHover.png) repeat-y;
+    overflow			: hidden; 
+  	border-bottom		: 1px solid #adfcdb;
+  	cursor				: pointer; 
+  }
+.panelImagenes b{
+  	cursor		:pointer;
+	font		:Times New Roman;
+	font-size	:15px;	
+	color		:#e0001a;
+}
+.marcocajas{	
+    cursor:pointer;
+    border     : 2px solid #bdd4e0;
+	background : #f2f9fb;
+    padding-left    : 4px;
+    border-radius   : 0px;
+    box-sizing      : border-box;
+	
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow   : 0px 3px 20px #798f9a;/*sombra*/
+	-webkit-box-sizing   : border-box;
+	
+	-moz-border-radius: 6px;
+	-moz-box-sizing   : border-box;
+	-moz-box-shadow   : 0px 1px 20px #adfcdb;
+	
+	-o-border-radius  : 10px;
+    -opera-sizing    : border-box;
+	
+    -khtml-box-sizing: border-box;
+    overflow         : hidden;
+
+  } 
+ /*///////barra de iconos//*/
+.efectos{
+width      : 45px;
+	height	   : 40px; 
+ cursor		:pointer;  
+}
+.efec{
+	width      		: 45px;
+	height	   		: 40px;
+	border     		: 1px solid #126fee;
+	padding-left    : 4px;
+    padding-right   : 4px;
+  	
+  	background 		: #5497f2;
+  	
+	text-shadow		:1px 1px 1px #96fdd0;
+	font			:Times New Roman;
+	font-size		:16px;
+	
+	color		:#000000;
+	-webkit-border-radius: 7px;
+}
+.efectos img:hover{
+	width      : 70px;
+	height	   : 65px; 
+	background 		: url(transImg1.png) repeat-y;
+	margin-top		: -19px;
+	margin-left		: -19px;
+	padding-left    : 4px;
+    padding-right   : 4px;
+  	padding-bottom  : 4px;
+  	padding-top     : 4px;
+  	
+	border     		: 1.5px solid #b2e3fd;
+	-webkit-border-radius: 5px;
+	cursor		:pointer;
+
+}
+ 
+.barraIcon{
+	width			: 513px;
+	padding-left    : 7px;
+    padding-right   : 7px;
+  	padding-bottom  : 7px;
+  	padding-top     : 7px;
+	margin-left		: 10%;
+	border     		: 1px solid #6ab0ff;
+	
+	-moz-border-radius: 6px;
+	-moz-box-sizing   : border-box;
+	-moz-box-shadow   : 0px 1px 20px #adfcdb;
+	
+	-o-border-radius  : 10px;
+    	
+	background 		: url(barraIcon2.png) repeat-x;
+}

@@ -1,0 +1,78 @@
+#footer 
+{
+	text-align:center;
+	font-size: 11px;
+	color: #BABABA;
+}
+#footer a 
+{ 
+	color: #aaa;
+}
+
+#footer a:hover { 
+	color: #111;
+}
+body {
+	width: 100%;
+	height:100%;
+	float: left;
+	margin-left: 0px;
+	background:#f9fcff;
+}
+.marcocajas{	
+    cursor:pointer;
+    border     : 2px solid #bdd4e0;
+	background : #f2f9fb;
+    padding-left    : 4px;
+    border-radius   : 0px;
+    box-sizing      : border-box;
+	
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow   : 0px 3px 20px #798f9a;/*sombra*/
+	-webkit-box-sizing   : border-box;
+	
+	-moz-border-radius: 6px;
+	-moz-box-sizing   : border-box;
+	-moz-box-shadow   : 0px 1px 20px #adfcdb;
+	
+	-o-border-radius  : 10px;
+    -opera-sizing    : border-box;
+	
+    -khtml-box-sizing: border-box;
+    overflow         : hidden;
+
+  }
+.hojaLog2{  
+	background	: url(pagLogo1.png) no-repeat ;
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow   : 0px 0px 40px #ADADAe;/*sombra*/	
+	-moz-border-radius: 10px;
+	-moz-box-shadow   : 0px 0px 40px #ADADAe;	
+    
+  } 
+.hojaContenedorLog1{	
+  	cursor:pointer; 
+  font:bold 12px Georgia, “Times New Roman”, Times, serif;
+    width      : 350px;
+	height	   : auto;
+    border     : 2px solid #BABABA;
+	
+    padding-left    : 10px;
+    padding-right   : 10px;
+  	padding-bottom  : 7px;
+  	padding-top     : 7px;
+   -webkit-border-radius: 10px;
+    -webkit-box-shadow   : 0px 0px 40px #ADADAe;/*sombra*/
+	-moz-border-radius: 10px;
+	-moz-box-shadow   : 0px 0px 40px #ADADAe;
+    overflow         : hidden;
+  }
+  .barraIni{  
+	 
+ 
+   -webkit-border-radius: 0px;
+    -webkit-box-shadow   : 0px 0px 10px #045aa8;/*sombra*/	
+	-moz-border-radius: 0px;
+	-moz-box-shadow   : 0px 0px 10px #045aa8;	
+    
+  } 
