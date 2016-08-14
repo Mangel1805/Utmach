@@ -11,9 +11,34 @@ from django.contrib import messages
 from django.template.context import RequestContext
 from django.http import HttpResponse,HttpResponseRedirect
 
+class imprimir(TemplateView):
+	template_name='notas/imprimir.html'
+	def get_context_data(self,**kwargs):
+		ctx = super(imprimir, self).get_context_data(**kwargs)
+		ctx['persona'] = Persona.objects.all()
+		ctx['sesion'] = Sesion.objects.all()
+		ctx['matricula']=Matricula.objects.all()
+		ctx['nota']=Nota.objects.all()
+		print ctx
+		return ctx
+
+class solicitud(TemplateView):
+	template_name='notas/imprimirSolicitud.html'
+	def get_context_data(self,**kwargs):
+		ctx = super(solicitud, self).get_context_data(**kwargs)
+		ctx['persona'] = Persona.objects.all()
+		ctx['sesion'] = Sesion.objects.all()
+		ctx['matricula']=Matricula.objects.all()
+		ctx['nota']=Nota.objects.all()
+		print ctx
+		return ctx
+		
+
+
 def salir(request):
 	prueba = Sesion.objects.all()
 	prueba.delete()
+	print "Eliminando Sesion"
 	return HttpResponseRedirect("http://localhost:8000/")
 
 class listarNota(ListView):

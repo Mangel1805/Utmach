@@ -37,7 +37,6 @@
     <link href="{{STATIC_URL}}js/plugins/jvectormap/jquery-jvectormap.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="{{STATIC_URL}}js/plugins/chartist-js/chartist.min.css" type="text/css" rel="stylesheet" media="screen,projection">
 
-
 </head>
 
 <body>
@@ -55,7 +54,7 @@
     <header id="header" class="page-topbar">
         <!-- start header nav-->
         <div class="navbar-fixed">
-            <nav class="cyan">
+            <nav class="blue">
                 <div class="nav-wrapper">
                     
                     <ul class="right">
@@ -68,8 +67,30 @@
                             {% endfor %}</h6>
                         </i>
                     </li>
-                    <li class="bold"><a href="/notas/salir" class="waves-effect waves-cyan"><i><h6>Cerrar Sesion</h6>   </i>        </li></a>
+                    <li class="bold"><a href="/notas/salir" class="waves-effect waves-blue"><i><h6>Cerrar Sesion</h6>   </i></li></a>
+                    <li>
+                        <img src="{{STATIC_URL}}images/user1.png" border="none" width="55px" height="65px" />
+                    </li>
                     </ul>
+
+
+
+
+
+
+                    <ul class="left">
+ 
+                    <li id="usuario" class="bold">
+                     <img src="{{STATIC_URL}}images/logoSIUTMACH.png" border="none" width=125px" height="75px" />
+                        
+                    </li>
+                    <li class="bold">
+                    <img float="left" src="{{STATIC_URL}}images/siutmach1.png" style="margin-top:-5px;" border="none" width=295px" height="75px" />
+                       
+                    </li>
+                    </ul>
+
+
                 </div>
             </nav>
         </div>
@@ -168,6 +189,11 @@
     Scripts
     ================================================ -->
     
+
+  
+
+
+
     <!-- jQuery Library -->
     <script type="text/javascript" src="{{STATIC_URL}}js/jquery-1.11.2.min.js"></script>    
     <!--materialize js-->

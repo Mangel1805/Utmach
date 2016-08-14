@@ -18,36 +18,35 @@
                                 {% if nota.matricula == mat%}
                                     {% if mat.estudiante.persona == per%}
                                             {% if ses.usuario == per%}
-                                            <thead>
-                     <tr>
-                       <td colspan="6"><strong><h5>
-                       
-                            {{nota.matricula.nivel}}
-                       
-
-                        </strong></h5></td>
-                   </tr>
-              <tr>
-                <td class="success">#</td>
-                <td class="success">Deberes</td>
-                <td class="success">Participacion</td>
-                <td class="success">L.Orales</td>
-                <td class="success">L.Escrita</td>
-                <td class="success">Examen</td>
-                <td class="success">Total</td>
-              </tr>
-            </thead>
-
-                    <tr>
-                        <td >{{nota.id}}</td>
-                        <td >{{nota.deberes}}</td>
-                        <td >{{nota.participacionClases}}</td>
-                        <td >{{nota.oral}}</td>
-                        <td >{{nota.escrita}}</td>
-                        <td >{{nota.examen}}</td>
-                        <td >{{nota.total}}</td>
-                </tr>
-
+                                                <thead>
+                                                    <tr>
+                                                       <td colspan="7">
+                                                            <strong>
+                                                                <h5>
+                                                                    {{nota.matricula.nivel}}
+                                                                </h5>
+                                                             </strong>   
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="success">Paralelo</td>
+                                                        <td class="success">Deberes</td>
+                                                        <td class="success">Participacion</td>
+                                                        <td class="success">L.Orales</td>
+                                                        <td class="success">L.Escrita</td>
+                                                        <td class="success">Examen</td>
+                                                        <td class="success">Total</td>
+                                                      </tr>
+                                                </thead>
+                                                    <tr>
+                                                        <td >{{nota.matricula.paralelo.descipcion}}</td>
+                                                        <td >{{nota.deberes}}</td>
+                                                        <td >{{nota.participacionClases}}</td>
+                                                        <td >{{nota.oral}}</td>
+                                                        <td >{{nota.escrita}}</td>
+                                                        <td >{{nota.examen}}</td>
+                                                        <td >{{nota.total}}</td>
+                                                    </tr>
                                             {%endif%}
                                     {%endif%}
                                 {%endif%}
@@ -64,9 +63,38 @@
         </table>
         
     </div>
-  <div id="datos">
-        
+<div class="row">
+           <table id = "tblTabla" class="table table-bordered table-hover">
+            <tr>
+            <td class="success"></td>
+            <td class="success"></td>
+            <td class="success"></td>
+            <td class="success"></td>
+            <td class="success"></td>
+            <td class="success"></td>
+            <td class="success"></td>
+                <td class="success">
+                <a href="{% url 'imprimir'  %}">
+                    <button type="button" class="btn btn-danger" id="btnGuardar">
+                        <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true">
+                        </span> Imprimir
+                    </button></a>
+                </td>
+                <td class="success">
+                <a href="{% url 'solicitud'  %}">   
+                    <button type="button" class="btn btn-danger" id="btnGuardar">
+                        <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true">
+                        </span> Generar Solicitud
+                    </button>
+                    </a>
+                </td>
+             </tr>
+            </table>
+
+
+
     </div>
+
 </div>
 
 {% endblock content %}

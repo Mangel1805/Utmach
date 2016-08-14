@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />      
+<link href="{{STATIC_URL}}css/bootstrap.css" rel='stylesheet' type='text/css'/>
+<link href="{{STATIC_URL}}css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SIUTMACH | IMPRIMIR</title>
+</head>
+<body onload="window.print();">
+
+<div class="container">
+
+
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="panel panel-primary">
+				<div class="panel-body">
+					<div class="col-xs-3">
+						<img src="{{STATIC_URL}}images/logo.png" border="none" width="125px" height="125px" />
+					</div>
+
+					<div class="col-xs-7">
+						<img src="{{STATIC_URL}}images/universidad.png" border="none" width="425px" height="116px" />
+					</div>
+				</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+		<div class="row">
+			<div class="col-xs-12">
+			<div class="panel panel-primary">
+				<div class="panel-body">
+					<div class="col-xs-12">
+						</br>
+							<p align="left"><strong>Certifico</strong></p>
+						</br>
+					</div>
+				<div class="col-xs-7">
+					    <div id="divTabla" class="table-responsive">
+					        <table id = "tblTabla" class="table  table-hover">            
+					            <tbody >
+									<thead>
+					                    <tr>
+					                       	<td class="success">#</td>
+											<td class="success">Paralelo</td>
+					                        <td class="success">Total</td>
+					                    </tr>
+					                </thead>
+
+					                                                
+					                 {% for nota in nota %}
+					                    {% for mat in matricula %}
+					                        {% for per in persona %}
+					                            {% for ses in sesion %}
+					                                {% if nota.matricula == mat%}
+					                                    {% if mat.estudiante.persona == per%}
+					                                            {% if ses.usuario == per%}
+					                                                    <tr>
+					                                                    	<td><strong>{{nota.matricula.nivel}}</strong></td>
+					                                                        <td >{{nota.matricula.paralelo.descipcion}}</td>
+					                                                        <td >{{nota.total}}/10</td>
+					                                                    </tr>
+					                                            {%endif%}
+					                                    {%endif%}
+					                                {%endif%}
+					                            {% endfor %}
+					                        {% endfor %}
+					                    {% endfor %}
+					                {% endfor %}
+					            </tbody>
+					        </table>
+					    </div>
+			   		</div>
+			    </div>
+
+
+
+				<div class="col-xs-12">
+					<div class="row">
+						<div class="col-xs-6">
+						</div>
+						<div class="col-xs-6">
+						</div>
+					</div>
+					
+				</div>
+
+
+
+
+
+
+
+			</div>
+		</div>
+
+
+</div>
+
+</body>
+</html>
+
+

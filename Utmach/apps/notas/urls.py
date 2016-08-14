@@ -14,6 +14,6 @@ urlpatterns = patterns('',
     url(r'^listar/$', listarNota.as_view(),name='listar_Notas'),
     url(r'^validar/$', validarLogin,name='validar'),
     url(r'^salir/$', 'apps.notas.views.salir', name='salir'),
-
-
+    url(r'^solicitud/$', solicitud.as_view(),name='solicitud'),
+    url(r'^imprimir/$', imprimir.as_view(),name='imprimir'),
     ) 
